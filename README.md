@@ -23,7 +23,7 @@ It implements the **RESP protocol**, supports **key expiration**, **list operati
 ---
 
 ## 📁 Project Structure
-
+```
 ```text
 respire-db
 ├── src
@@ -33,13 +33,14 @@ respire-db
 │   │
 │   ├── config.json         # Persistence configuration
 │   ├── core.js             # Command handlers & execution engine
-│   ├── persistence.js     # Snapshot & AOF persistence logic
+│   ├── persistence.js      # Snapshot & AOF persistence logic
 │   └── server.js           # TCP server (port 6379)
 │
 └── test
     └── server.test.js      # Integration tests
+```
+---
 
-    
 ## ⚙️ Supported Commands
 
 ### 🔑 String Commands
@@ -63,8 +64,6 @@ respire-db
 ### ⚠️ Other
 - `COMMAND`
 - Graceful handling of unknown commands
-
----
 
 ## 💾 Persistence
 
