@@ -38,9 +38,9 @@ respire-db
 │
 └── test
     └── server.test.js      # Integration tests
-```text
 
-##⚙️ Supported Commands
+    
+## ⚙️ Supported Commands
 
 ### 🔑 String Commands
 - `SET key value`
