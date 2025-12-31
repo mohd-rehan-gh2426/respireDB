@@ -38,3 +38,51 @@ respire-db
 │
 └── test
     └── server.test.js      # Integration tests
+
+## ⚙️ Supported Commands
+
+### 🔑 String Commands
+- `SET key value`
+- `GET key`
+- `DEL key`
+- `INCR key`
+- `DECR key`
+
+### ⏳ Expiration Commands
+- `EXPIRE key seconds`
+- `TTL key`
+
+### 📚 List Commands
+- `LPUSH key value [value ...]`
+- `RPUSH key value [value ...]`
+- `LPOP key`
+- `RPOP key`
+- `LRANGE key start stop`
+
+### ⚠️ Other
+- `COMMAND`
+- Graceful handling of unknown commands
+
+---
+
+## 💾 Persistence
+
+Configured via `src/config.json`:
+
+```json
+{
+  "snapshot": false,
+  "snapshotInterval": 5000,
+  "appendonly": true,
+  "aofCommands": [
+    "SET",
+    "DEL",
+    "EXPIRE",
+    "INCR",
+    "DECR",
+    "LPUSH",
+    "RPUSH",
+    "LPOP",
+    "RPOP"
+  ]
+}
